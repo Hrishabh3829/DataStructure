@@ -9,9 +9,10 @@ void foo( int array[],int length){
   }
   for(int i=0;i<length;i++){
     product*= array[i];
-    
-  return product;
   }
+  
+  printf("Sum: %d\n", sum);
+  printf("Product: %d\n", product);
 }
 
 
