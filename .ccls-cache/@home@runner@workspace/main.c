@@ -1,22 +1,17 @@
 #include <stdio.h>
 #include<string.h>
-int fibonacci(int n){
-   if(n==0){
-       return 0;
-   }
-    else if(n==1){
-       return 1;
+int lenghtOfString(char str[100]){
+    int i=0;
+    while(str[i]!='\0'){
+        i++;
     }
-    return fibonacci(n-1)+fibonacci(n-2);
-    
-    
+    return i;
 }
 int main() {
-    int number;
-    scanf("%d",&number);
-    for(int i=0;i<number;i++){
-        printf("%d\n",fibonacci(i));
-    }
+   
+    char str;
+    scanf("%s",&str);
+    printf("Length of a String: %d",lenghtOfString(str));
     return 0;
    
 }
