@@ -1,20 +1,19 @@
 #include <stdio.h>
-
-int sumOfElement(int arr[],int n){//n=123
-    int sum=0;
-    for(int i=0;i<n;i++){
-        sum+=arr[i];
+#include<string.h>
+void palindrome(char str[100]){
+    char rev[100];
+    strcpy(rev,str);
+    strrev(rev);
+    if(strcmp(str,rev)==0){
+        printf("palindrome");
     }
-    return sum;
+    else{
+        printf("Not a palindrome");
+    }
 }
-int main() {
-    int number; 
-    scanf("%d",&number);
-    int arr[number];
-    scanf("%d",&arr[number]);
-    
-    int result = sumOfElement(arr,number);
-    printf("%d\n", result);
-
+int main(void) {
+    char str;
+    scanf("%s",&str);
+    palindrome(str);
     return 0;
 }
