@@ -1,25 +1,18 @@
 #include <stdio.h>
 
-void foo( int array[],int length){
-  int sum=0;
-  int product =31;
-  for (int i=0;i<length;i++){
-    sum+=array[i];
-    
-  }
-  for(int i=0;i<length;i++){
-    product*= array[i];
-  }
-  
-  printf("Sum: %d\n", sum);
-  printf("Product: %d\n", product);
+int reverseNumber(int n){//n=123
+    int reversed=0,rem;
+    while(n!=0){
+        rem=rem%10;
+        reversed=reversed*10+ rem;
+        n /= 10;
+    }
+    return reversed;
 }
+int main() {
+    int number; 
+    scanf("%d",&number);
+    reverseNumber(number);
 
-
-int main(void) {
-  // printf("Hello World\n");
-  int arr[]={3,5,66};
-  foo(arr, 3);
-  
-  return 0;
+    return 0;
 }
