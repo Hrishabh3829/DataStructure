@@ -1,19 +1,22 @@
 #include <stdio.h>
 #include<string.h>
-void palindrome(char str[100]){
-    char rev[100];
-    strcpy(rev,str);
-    strrev(rev);
-    if(strcmp(str,rev)==0){
-        printf("palindrome");
+int fibonacci(int n){
+   if(n==0){
+       return 0;
+   }
+    else if(n==1){
+       return 1;
     }
-    else{
-        printf("Not a palindrome");
-    }
+    return fibonacci(n-1)+fibonacci(n-2);
+    
+    
 }
-int main(void) {
-    char str;
-    scanf("%s",&str);
-    palindrome(str);
+int main() {
+    int number;
+    scanf("%d",&number);
+    for(int i=0;i<number;i++){
+        printf("%d\n",fibonacci(i));
+    }
     return 0;
+   
 }
