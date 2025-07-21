@@ -3,7 +3,7 @@
 int reverseNumber(int n){//n=123
     int reversed=0,rem;
     while(n!=0){
-        rem=rem%10;
+        rem=n%10;
         reversed=reversed*10+ rem;
         n /= 10;
     }
@@ -12,7 +12,8 @@ int reverseNumber(int n){//n=123
 int main() {
     int number; 
     scanf("%d",&number);
-    reverseNumber(number);
+    int result = reverseNumber(number);
+    printf("%d\n", result);
 
     return 0;
 }
