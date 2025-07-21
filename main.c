@@ -1,18 +1,19 @@
 #include <stdio.h>
 
-int reverseNumber(int n){//n=123
-    int reversed=0,rem;
-    while(n!=0){
-        rem=n%10;
-        reversed=reversed*10+ rem;
-        n /= 10;
+int sumOfElement(int arr[],int n){//n=123
+    int sum=0;
+    for(int i=0;i<n;i++){
+        sum+=arr[i];
     }
-    return reversed;
+    return sum;
 }
 int main() {
     int number; 
     scanf("%d",&number);
-    int result = reverseNumber(number);
+    int arr[number];
+    scanf("%d",&arr[number]);
+    
+    int result = sumOfElement(arr,number);
     printf("%d\n", result);
 
     return 0;
