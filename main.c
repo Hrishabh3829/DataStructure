@@ -16,11 +16,6 @@ void createArray(struct myArray *a, int tSize, int uSize) {
   a->ptr = (int *)malloc(tSize * sizeof(int));
 }
 
-void show(struct myArray *a) {
-  for (int i = 0; i < a->used_size; i++) {
-    printf("%d\n", (a->ptr)[i]);
-  }
-}
 void setVal(struct myArray *a) {
   int n;
   for (int i = 0; i < a->used_size; i++) {
@@ -36,7 +31,7 @@ int main() {
   printf("We are running setVal now\n");
   setVal(&marks);
   printf("We are running show now\n");
-  show(&marks);
+  // show(&marks);
 
   return 0;
 }
