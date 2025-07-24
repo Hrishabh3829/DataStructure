@@ -7,6 +7,7 @@ struct myArray {
 };
 
 void createArray(struct myArray *a, int tSize, int uSize) {
+  //We can use this also
   // (*a).total_size = tSize;
   // (*a).used_size = uSize;
   // (*a).ptr = (int *)malloc(tSize * sizeof(int));
