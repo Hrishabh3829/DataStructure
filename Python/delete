@@ -28,10 +28,11 @@ class MeraList:
 
   def __delitem__(self,pos):
     #delete
-    for i in range(pos,self.n-1):
-      self.A[i]=self.A[i+1]
+    if 0<=pos<self.n:
+      for i in range(pos,self.n-1):
+        self.A[i]=self.A[i+1]
     self.n = self.n -1
-
+  
 
   def append(self, item):
     if self.n == self.size:
