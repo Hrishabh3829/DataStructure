@@ -29,12 +29,16 @@ class LinkedList:
     #increment n
     self.n=self.n + 1
 
-  def traverse(self):
+  def __str__(self):
     curr = self.head
 
+    result=''
+
     while curr != None:
-      print(curr.data)
+      result=result + str(curr.data) + '->'
       curr =curr.next
+    return result[:-2]
+
 
 L=LinkedList()
 L.insert_head(1)
@@ -42,5 +46,4 @@ L.insert_head(2)
 L.insert_head(3)
 L.insert_head(4)
 
-L.traverse()
-
+print(L)
