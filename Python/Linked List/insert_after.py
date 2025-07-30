@@ -64,6 +64,7 @@ class LinkedList:
       if curr.data== after:
         break
       curr =curr.next
+      self.n = self.n + 1
     if curr!=None:
       new_node.next=curr.next
       curr.next=new_node
