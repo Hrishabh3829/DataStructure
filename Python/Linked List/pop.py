@@ -84,6 +84,9 @@ class LinkedList:
 
 
   def pop(self):
+    if self.head==None:
+      return 'Empty LL'
+
     curr = self.head
 
     #check linked list mai 1 item hai?
