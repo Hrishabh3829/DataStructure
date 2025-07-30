@@ -76,6 +76,9 @@ class LinkedList:
     self.n = 0
 
   def delete_head(self):
+    if self.head==None:
+      #empty
+      return 'Empty LL'
     self.head=self.head.next
 
 
