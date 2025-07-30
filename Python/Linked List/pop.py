@@ -80,6 +80,21 @@ class LinkedList:
       #empty
       return 'Empty LL'
     self.head=self.head.next
+    self.n=self.n -1 
+
+
+  def pop(self):
+    curr = self.head
+
+    #check linked list mai 1 item hai?
+    if curr.next==None:
+      #head hi hoga (delete from head)
+      return self.delete_head()
+
+    while curr.next.next != None:
+      curr=curr.next
+    #curr --> 2nd last node 
+    curr.next = None
     self.n = self.n-1
 
 
@@ -89,6 +104,6 @@ L.insert_head(2)
 L.insert_head(3)
 L.insert_head(4)
 
-L.delete_head()
+L.pop()
 
 print(L)
