@@ -42,9 +42,9 @@ class Stack:
     while temp != None:
       print(temp.data)
       temp = temp.next
+ 
 
-
-s = Stack()
+s = Stack() 
 s.push(2)
 s.push(3)
 s.push(4)
