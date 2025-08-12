@@ -38,6 +38,9 @@ class Dictonary:
           return "Not found"
     return "Not found"
 
+  def __getitem__(self, key):
+    return self.get(key)
+
   def __setitem__(self, key, value):
     self.put(key, value)
 
@@ -58,4 +61,6 @@ D.put("java", 54)
 print(D.slots)
 print(D.data)
 
-print(D.get("pyhton"))
+print(D.get("C"))
+
+print(D["pyhton"])
