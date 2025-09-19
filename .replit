@@ -2,6 +2,7 @@ compile = ["make", "-s"]
 run = "./main"
 entrypoint = "main.c"
 hidden = ["main", "main-debug", "**/*.o", "**/*.d", ".ccls-cache", "Makefile"]
+modules = ["c-clang"]
 
 [nix]
 channel = "stable-24_05"
@@ -66,3 +67,29 @@ pattern = "**/*.{c,h}"
 
 [languages.c.languageServer]
 start = "ccls"
+
+[agent]
+expertMode = true
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "C Program"
+
+[[workflows.workflow]]
+name = "C Program"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "gcc -o palindrome main.c && echo \"Enter a word to check if it's a palindrome:\" && ./palindrome"
+
+[workflows.workflow.metadata]
+outputType = "console"

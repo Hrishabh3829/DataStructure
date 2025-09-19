@@ -1,22 +1,28 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
 
-int fib(int n) {
-  if (n == 0)
-    return 0;
-  else if (n == 1)
-    return 1;
-  else {
-    return fib(n - 1) + fib(n - 2);
-  }
+// Custom function to reverse a string
+void reverse_string(char* str) {
+    int len = strlen(str);
+    for (int i = 0; i < len / 2; i++) {
+        char temp = str[i];
+        str[i] = str[len - 1 - i];
+        str[len - 1 - i] = temp;
+    }
 }
+
 int main() {
-  int n;
-  scanf("%d", &n);
-  // int result=fib(n);
-  for (int i = 0; i < n; i++) {
-    printf("%d ", fib(i));
-  }
+  char rev[100], str[100];
+  scanf("%s", str);
+
+  strcpy(rev, str);
+
+  reverse_string(rev);
+
+  if (strcmp(str, rev) == 0)
+    printf("palindrome\n");
+  else
+    printf("not palindrome\n");
 
   return 0;
 }
