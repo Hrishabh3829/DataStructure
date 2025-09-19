@@ -13,7 +13,7 @@ void reverse_string(char* str) {
 
 int main() {
   char rev[100], str[100];
-  scanf("%s", str);
+  // scanf("%s", str);
 
   strcpy(rev, str);
 
