@@ -87,9 +87,9 @@ args = "C Program"
 name = "C Program"
 author = "agent"
 
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "gcc -o palindrome main.c && echo \"Enter a word to check if it's a palindrome:\" && ./palindrome"
-
 [workflows.workflow.metadata]
 outputType = "console"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "gcc -o fibonacci main.c && echo \"Enter the number of fibonacci numbers to display:\" && ./fibonacci"
