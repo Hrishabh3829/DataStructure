@@ -72,7 +72,6 @@ start = "ccls"
 expertMode = true
 
 [workflows]
-runButton = "Project"
 
 [[workflows.workflow]]
 name = "Project"
