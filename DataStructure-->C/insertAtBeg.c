@@ -41,3 +41,5 @@ int main(){
     return 0;
     
 }
+
+//List contains: 2 5 10
